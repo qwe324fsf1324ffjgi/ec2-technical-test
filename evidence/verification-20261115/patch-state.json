@@ -1,0 +1,26 @@
+{
+  "InstancePatchStates": [
+    {
+      "InstanceId": "i-0d341cc5ce8fd20a7",
+      "PatchGroup": "ec2-technical-test",
+      "BaselineId": "pb-078e511dd3f341434",
+      "SnapshotId": "6597e78a-bb5e-4664-89ef-2a1b600b7839",
+      "InstalledCount": 505,
+      "InstalledOtherCount": 0,
+      "InstalledPendingRebootCount": 0,
+      "InstalledRejectedCount": 0,
+      "MissingCount": 0,
+      "FailedCount": 0,
+      "UnreportedNotApplicableCount": -1,
+      "NotApplicableCount": 14114,
+      "AvailableSecurityUpdateCount": -1,
+      "OperationStartTime": "2026-11-15T09:00:40+01:00",
+      "OperationEndTime": "2026-11-15T09:01:34+01:00",
+      "Operation": "Install",
+      "RebootOption": "RebootIfNeeded",
+      "CriticalNonCompliantCount": 0,
+      "SecurityNonCompliantCount": 0,
+      "OtherNonCompliantCount": 0
+    }
+  ]
+}

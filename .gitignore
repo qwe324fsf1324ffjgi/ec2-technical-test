@@ -1,0 +1,32 @@
+# Terraform cache, generated monitor package, state and plans
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfvars
+*.tfvars.json
+backend.*.hcl
+.terraform.tfstate.lock.info
+crash.log
+crash.*.log
+.local-backups/
+# Local credentials and private material
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+.aws/
+credentials
+.private-evidence/
+# Local output and editor caches
+*.zip
+__pycache__/
+*.py[cod]
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+# Curated evidence is intentionally included. Review new captures before staging.
+# Commit .terraform.lock.hcl and the *.example input templates.

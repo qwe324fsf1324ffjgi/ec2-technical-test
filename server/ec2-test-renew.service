@@ -1,0 +1,9 @@
+[Unit]
+Description=Renew the website HTTPS certificate
+Wants=network-online.target
+After=network-online.target nginx.service
+ConditionPathExists=/var/lib/ec2-test/bootstrap-complete
+
+[Service]
+Type=oneshot
+ExecStart=/opt/ec2-test-certbot/bin/certbot renew --quiet --deploy-hook "/usr/bin/systemctl reload nginx"

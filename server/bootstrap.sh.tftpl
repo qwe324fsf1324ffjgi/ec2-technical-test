@@ -1,0 +1,34 @@
+#!/bin/bash
+set -euo pipefail
+
+if test -f /var/lib/ec2-test/bootstrap-complete; then
+    exit 0
+fi
+
+PUBLIC_IP='${public_ip}'
+CERT_EMAIL=$(printf '%s' '${email_base64}' | base64 --decode)
+
+# The Elastic IP is associated after launch. Failed attempts retry via systemd.
+dnf -y upgrade --releasever=latest
+dnf -y install nginx python3.11 python3.11-pip
+python3.11 -m venv /opt/ec2-test-certbot
+/opt/ec2-test-certbot/bin/pip install --no-cache-dir 'certbot==5.4.0'
+
+install -d -m 0755 /var/lib/letsencrypt /var/lib/ec2-test
+cp /etc/ec2-test/nginx-bootstrap.conf /etc/nginx/nginx.conf
+nginx -t
+systemctl enable nginx
+systemctl restart nginx
+
+/opt/ec2-test-certbot/bin/certbot certonly \
+    --non-interactive --agree-tos --email "$CERT_EMAIL" \
+    --server https://acme-v02.api.letsencrypt.org/directory \
+    --preferred-profile shortlived --webroot --webroot-path /var/lib/letsencrypt \
+    --ip-address "$PUBLIC_IP" --cert-name ec2-test --keep-until-expiring \
+    --deploy-hook '/usr/bin/systemctl reload nginx'
+
+cp /etc/ec2-test/nginx-https.conf /etc/nginx/nginx.conf
+nginx -t
+systemctl reload nginx
+touch /var/lib/ec2-test/bootstrap-complete
+echo 'Website bootstrap completed.'

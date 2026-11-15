@@ -1,0 +1,25 @@
+Selected output excerpts, 14 November 2026. Headings identify the originating checks.
+
+SSM corruption recovery drill, after restoring from snapshot-backed disk
+/srv/ec2-test/site/index.html: OK
+PASS: restored file and HTTPS page match the baseline.
+Sat Nov 14 09:31:05 UTC 2026
+
+CloudTrail validate-logs
+Results found for 2026-11-14T10:15:00Z to 2026-11-14T14:15:08Z:
+
+5/5 digest files valid
+49/49 log files valid
+
+Website monitor, deliberately altered landing page
+{"active": true, "WebsiteFailure": 1, "CertificateRisk": 0, "note": "ValueError: Website content hash mismatch: /"}
+
+Website monitor, restored landing page
+{"active": true, "WebsiteFailure": 0, "CertificateRisk": 0, "note": "HTTPS and content checks passed"}
+
+Restricted operator, interactive shell
+sh-5.2$ echo "RESTRICTED-OPERATOR-TEST"
+RESTRICTED-OPERATOR-TEST
+
+Final Terraform plan
+No changes. Your infrastructure matches the configuration.

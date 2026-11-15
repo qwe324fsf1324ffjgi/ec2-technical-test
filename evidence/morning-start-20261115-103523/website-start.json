@@ -1,0 +1,26 @@
+﻿{
+    "ActionAfterCompletion": "NONE",
+    "Arn": "arn:aws:scheduler:eu-north-1:312660809284:schedule/ec2-test/website-start",
+    "CreationDate": "2026-11-13T14:39:04.740000+01:00",
+    "FlexibleTimeWindow": {
+        "Mode": "OFF"
+    },
+    "GroupName": "ec2-test",
+    "LastModificationDate": "2026-11-14T10:10:12.970000+01:00",
+    "Name": "website-start",
+    "ScheduleExpression": "cron(0 7 * * ? *)",
+    "ScheduleExpressionTimezone": "Africa/Lagos",
+    "State": "ENABLED",
+    "Target": {
+        "Arn": "arn:aws:scheduler:::aws-sdk:ec2:startInstances",
+        "DeadLetterConfig": {
+            "Arn": "arn:aws:sqs:eu-north-1:312660809284:ec2-test-schedule-failures"
+        },
+        "Input": "{\"InstanceIds\":[\"i-0d341cc5ce8fd20a7\"]}",
+        "RetryPolicy": {
+            "MaximumEventAgeInSeconds": 900,
+            "MaximumRetryAttempts": 3
+        },
+        "RoleArn": "arn:aws:iam::312660809284:role/ec2-test-scheduler-bf5f87ef53e6815ea9b5bed874"
+    }
+}

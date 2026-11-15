@@ -1,0 +1,44 @@
+﻿{
+    "InstanceStatuses": [
+        {
+            "AvailabilityZone": "eu-north-1b",
+            "AvailabilityZoneId": "eun1-az2",
+            "Operator": {
+                "Managed": false,
+                "HiddenByDefault": false
+            },
+            "InstanceId": "i-0d341cc5ce8fd20a7",
+            "InstanceState": {
+                "Code": 16,
+                "Name": "running"
+            },
+            "InstanceStatus": {
+                "Details": [
+                    {
+                        "Name": "reachability",
+                        "Status": "passed"
+                    }
+                ],
+                "Status": "ok"
+            },
+            "SystemStatus": {
+                "Details": [
+                    {
+                        "Name": "reachability",
+                        "Status": "passed"
+                    }
+                ],
+                "Status": "ok"
+            },
+            "AttachedEbsStatus": {
+                "Details": [
+                    {
+                        "Name": "reachability",
+                        "Status": "passed"
+                    }
+                ],
+                "Status": "ok"
+            }
+        }
+    ]
+}

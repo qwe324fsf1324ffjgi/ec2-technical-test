@@ -1,0 +1,16 @@
+[Unit]
+Description=Configure the EC2 website
+Wants=network-online.target
+After=network-online.target cloud-final.service
+StartLimitIntervalSec=0
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/ec2-test-bootstrap
+RemainAfterExit=yes
+Restart=on-failure
+RestartSec=300
+TimeoutStartSec=1800
+
+[Install]
+WantedBy=multi-user.target

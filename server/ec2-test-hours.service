@@ -1,0 +1,7 @@
+[Unit]
+Description=Stop the website outside its operating hours
+ConditionPathExists=/var/lib/ec2-test/bootstrap-complete
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/ec2-test-enforce-hours

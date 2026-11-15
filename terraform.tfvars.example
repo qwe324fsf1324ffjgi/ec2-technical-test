@@ -1,0 +1,14 @@
+# Fresh-account example only. Do not copy over the live deployment's tfvars.
+aws_region          = "eu-north-1"
+expected_account_id = "YOUR_ACCOUNT_ID"
+monthly_budget_usd  = 10
+alert_email         = "you@example.com"
+server_ami_id       = "YOUR_REGIONAL_AL2023_ARM64_AMI_ID"
+deployment_site     = "primary"
+
+# Existing live deployment uses recovery=true/recovery site; preserve its file.
+recovery_snapshot_id     = null
+use_recovery_image       = false
+enable_corruption_drill   = false
+operator_trusted_role_arn = null
+# For restricted daily access, replace null with your existing IAM login-role ARN.

@@ -1,0 +1,26 @@
+﻿{
+    "ActionAfterCompletion": "NONE",
+    "Arn": "arn:aws:scheduler:eu-north-1:312660809284:schedule/ec2-test/website-stop",
+    "CreationDate": "2026-11-13T14:39:04.738000+01:00",
+    "FlexibleTimeWindow": {
+        "Mode": "OFF"
+    },
+    "GroupName": "ec2-test",
+    "LastModificationDate": "2026-11-14T10:10:12.970000+01:00",
+    "Name": "website-stop",
+    "ScheduleExpression": "cron(0 19 * * ? *)",
+    "ScheduleExpressionTimezone": "Africa/Lagos",
+    "State": "ENABLED",
+    "Target": {
+        "Arn": "arn:aws:scheduler:::aws-sdk:ec2:stopInstances",
+        "DeadLetterConfig": {
+            "Arn": "arn:aws:sqs:eu-north-1:312660809284:ec2-test-schedule-failures"
+        },
+        "Input": "{\"InstanceIds\":[\"i-0d341cc5ce8fd20a7\"]}",
+        "RetryPolicy": {
+            "MaximumEventAgeInSeconds": 900,
+            "MaximumRetryAttempts": 3
+        },
+        "RoleArn": "arn:aws:iam::312660809284:role/ec2-test-scheduler-bf5f87ef53e6815ea9b5bed874"
+    }
+}

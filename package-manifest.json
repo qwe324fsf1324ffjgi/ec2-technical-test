@@ -1,0 +1,18 @@
+{
+  "edition": "github",
+  "date": "2026-11-15",
+  "owner": "Zerah Abba",
+  "runtime_assets_unchanged": 34,
+  "selected_gallery_images": 32,
+  "pdf_pages": 18,
+  "git_repository_metadata_included": false,
+  "private_originals_included": false,
+  "ci_status": "Inactive example; not executed",
+  "terraform_validation_this_release": "Not run; Terraform unavailable",
+  "redacted_event_files": [
+    "evidence/scheduled-stop-2026-11-14.json",
+    "evidence/morning-start-20261115-103523/StopInstances-original.json",
+    "evidence/morning-start-20261115-103523/StartInstances-original.json"
+  ],
+  "source_handovers": "Derived from private full handover and uploaded project. See PUBLIC-EVIDENCE.md."
+}

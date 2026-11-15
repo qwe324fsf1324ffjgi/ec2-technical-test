@@ -1,0 +1,44 @@
+user nginx;
+worker_processes auto;
+pid /run/nginx.pid;
+error_log /var/log/nginx/error.log warn;
+events { worker_connections 256; }
+http {
+    include /etc/nginx/mime.types;
+    default_type application/octet-stream;
+    server_tokens off;
+    access_log /var/log/nginx/access.log;
+    client_max_body_size 1m;
+    sendfile on;
+    server {
+        listen 80 default_server;
+        server_name _;
+        location ^~ /.well-known/acme-challenge/ {
+            root /var/lib/letsencrypt;
+            try_files $uri =404;
+        }
+        location / { return 301 https://${public_ip}$request_uri; }
+    }
+    server {
+        listen 443 ssl default_server;
+        server_name ${public_ip};
+        ssl_certificate /etc/letsencrypt/live/ec2-test/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/ec2-test/privkey.pem;
+        ssl_protocols TLSv1.2 TLSv1.3;
+        ssl_session_cache shared:SSL:1m;
+        ssl_session_timeout 10m;
+        root /srv/ec2-test/site;
+        index index.html;
+        add_header X-Content-Type-Options nosniff always;
+        add_header X-Frame-Options DENY always;
+        add_header Referrer-Policy no-referrer always;
+        add_header Content-Security-Policy "default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'" always;
+        if ($request_method !~ ^(GET|HEAD)$) { return 405; }
+        location / { try_files $uri $uri/ =404; }
+        location = /healthz {
+            default_type text/plain;
+            return 200 "ok\n";
+        }
+        location ~ /\. { deny all; }
+    }
+}

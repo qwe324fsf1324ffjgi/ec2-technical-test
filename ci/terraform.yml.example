@@ -1,0 +1,20 @@
+name: Terraform validation example
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.15.8
+      - name: Package monitor
+        run: |
+          mkdir -p .local-backups
+          (cd monitor && zip ../.local-backups/website-monitor.zip handler.py)
+      - run: terraform fmt -check -recursive
+      - run: terraform init -backend=false -lockfile=readonly
+      - run: terraform validate -no-color

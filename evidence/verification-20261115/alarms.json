@@ -1,0 +1,30 @@
+[
+  {
+    "Name": "ec2-test-certificate-risk",
+    "State": "OK"
+  },
+  {
+    "Name": "ec2-test-instance-status",
+    "State": "OK"
+  },
+  {
+    "Name": "ec2-test-notification-failures",
+    "State": "OK"
+  },
+  {
+    "Name": "ec2-test-scheduler-failures",
+    "State": "OK"
+  },
+  {
+    "Name": "ec2-test-security-routing-failures",
+    "State": "OK"
+  },
+  {
+    "Name": "ec2-test-sustained-cpu",
+    "State": "OK"
+  },
+  {
+    "Name": "ec2-test-website-failure",
+    "State": "OK"
+  }
+]
