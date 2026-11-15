@@ -4,7 +4,7 @@
       "EventId": "3cc10a9f-c315-4f2f-b34c-c21f319a0d54",
       "EventName": "StopInstances",
       "ReadOnly": "false",
-      "AccessKeyId": "ASIAURTAJKZCOOZTGFHK",
+      "AccessKeyId": "REDACTED_FOR_PUBLIC_REPOSITORY",
       "EventTime": "2026-11-14T19:00:30+01:00",
       "EventSource": "ec2.amazonaws.com",
       "Username": "4714d8d51d223d97b05c1b087282dd74",
