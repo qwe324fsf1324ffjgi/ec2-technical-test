@@ -170,10 +170,11 @@ The workload is account `312660809284` in Stockholm. The central identity accoun
 
 **Every supplied Drive link is retained below.** Images are stored with the repository so GitHub can render them without depending on a Drive thumbnail service. Click a screenshot to open its original Drive source. The featured website image opens the live website; its adjacent source link opens the original capture.
 
-The sections are collapsed to keep the README readable. They contain **79 unmodified screenshot assets and one source-only sign-in capture**. The source-only image exposes an OAuth callback code in the browser address bar and is not copied into the public assets. [Complete source index](docs/readme-evidence/SOURCES.md).
+All screenshot sections display directly as you scroll, without expanding panels. They contain **79 unmodified screenshot assets and one source-only sign-in capture**. The source-only image exposes an OAuth callback code in the browser address bar and is not copied into the public assets. [Complete source index](docs/readme-evidence/SOURCES.md).
 
-<details>
-<summary><strong>Terraform validation and drift</strong> · 2 sources</summary>
+## Terraform validation and drift
+
+2 source captures.
 
 ### 70. Terraform validation succeeds
 
@@ -187,10 +188,12 @@ The sections are collapsed to keep the README readable. They contain **79 unmodi
 
 **Terraform reports no infrastructure changes.** The plan finishes with No changes. Your infrastructure matches the configuration. This is a capture-time drift result, not a new apply. [Open original](https://drive.google.com/file/d/10Mo0RaZPPn7VqEAl1R0jAW3jN6s_J8kB/view?usp=drivesdk).
 
-</details>
 
-<details>
-<summary><strong>Application, healthy server and networking identity</strong> · 10 sources</summary>
+---
+
+## Application, healthy server and networking identity
+
+10 source captures.
 
 ### 15. Website after the scheduled morning start
 
@@ -252,10 +255,12 @@ The sections are collapsed to keep the README readable. They contain **79 unmodi
 
 **Instance boot and recovery-image details.** The details view identifies the recovery image and instance properties. This supports the documented snapshot-backed boot path. [Open original](https://drive.google.com/file/d/1D97BNm6l5lM5QjDa-ezfRlTCV5UFbf2T/view?usp=drivesdk).
 
-</details>
 
-<details>
-<summary><strong>Automated operating hours</strong> · 10 sources</summary>
+---
+
+## Automated operating hours
+
+10 source captures.
 
 ### 59. Recorded automatic morning start
 
@@ -317,10 +322,12 @@ The sections are collapsed to keep the README readable. They contain **79 unmodi
 
 **Stop schedule next-trigger view.** The stop-schedule page shows the enabled schedule, local timezone and forthcoming trigger information at capture time. [Open original](https://drive.google.com/file/d/1T17Hwe5du-FPfrnHznmXrzcfWoKbVAli/view?usp=drivesdk).
 
-</details>
 
-<details>
-<summary><strong>Automatic backup, manual recovery point and image</strong> · 9 sources</summary>
+---
+
+## Automatic backup, manual recovery point and image
+
+9 source captures.
 
 ### 16. Completed automatic root-disk snapshot
 
@@ -376,10 +383,12 @@ The sections are collapsed to keep the README readable. They contain **79 unmodi
 
 **Daily schedule and seven-day retention.** The policy schedule records daily snapshot initiation and the configured age-based retention. Future deletion behaviour is not yet observed. [Open original](https://drive.google.com/file/d/1v4S-OjFIjz1xoEtdfDi5xWVw5lxVH9fJ/view?usp=drivesdk).
 
-</details>
 
-<details>
-<summary><strong>Monitoring, notification actions and inbox receipt</strong> · 9 sources</summary>
+---
+
+## Monitoring, notification actions and inbox receipt
+
+9 source captures.
 
 ### 01. Seven alarm states are OK
 
@@ -435,10 +444,12 @@ The sections are collapsed to keep the README readable. They contain **79 unmodi
 
 **EventBridge connected to the checker.** The Lambda overview shows the monitor function and its EventBridge trigger. [Open original](https://drive.google.com/file/d/1Lj-Ti_i9a6vv8BKvai82agl6IJ-NOfhN/view?usp=drivesdk).
 
-</details>
 
-<details>
-<summary><strong>Patching and custom baseline</strong> · 3 sources</summary>
+---
+
+## Patching and custom baseline
+
+3 source captures.
 
 ### 60. Daily patch installation completed
 
@@ -458,10 +469,12 @@ The sections are collapsed to keep the README readable. They contain **79 unmodi
 
 **Custom patch baseline.** The baseline detail page records the Amazon Linux 2023 approval policy and project patch-group configuration. [Open original](https://drive.google.com/file/d/1GgUEUFVCUAb1uEtimgrrHIewUrsrak9o/view?usp=drivesdk).
 
-</details>
 
-<details>
-<summary><strong>Threat detection and security-event routing</strong> · 8 sources</summary>
+---
+
+## Threat detection and security-event routing
+
+8 source captures.
 
 ### 39. Enabled regional GuardDuty detector
 
@@ -511,10 +524,12 @@ The sections are collapsed to keep the README readable. They contain **79 unmodi
 
 **GuardDuty finding routing rule.** The enabled EventBridge rule matches GuardDuty findings for the project notification path. [Open original](https://drive.google.com/file/d/1dPcjxzt4_KgSE7Vk3fgdgPWjn1rXQ97y/view?usp=drivesdk).
 
-</details>
 
-<details>
-<summary><strong>Security groups and public web-port rules</strong> · 4 sources</summary>
+---
+
+## Security groups and public web-port rules
+
+4 source captures.
 
 ### 21. Server role and attached security group
 
@@ -540,10 +555,12 @@ The sections are collapsed to keep the README readable. They contain **79 unmodi
 
 **Inbound and outbound rules together.** The displayed tables show TCP 80 and 443 in each direction. There is no inbound SSH rule in the supplied project rules. [Open original](https://drive.google.com/file/d/1yVHco1shOlpXRxrUVx9ymS4Bi3HOYnUW/view?usp=drivesdk).
 
-</details>
 
-<details>
-<summary><strong>Audit trail and storage encryption</strong> · 5 sources</summary>
+---
+
+## Audit trail and storage encryption
+
+5 source captures.
 
 ### 11. CloudTrail management-event history
 
@@ -575,10 +592,12 @@ The sections are collapsed to keep the README readable. They contain **79 unmodi
 
 **State and audit bucket inventory.** The bucket list identifies the project state and audit storage. Separate controls establish public-access blocking, versioning and retention. [Open original](https://drive.google.com/file/d/1PRyDKgnKM70iRGhSw10wQ0KzemdnTgct/view?usp=drivesdk).
 
-</details>
 
-<details>
-<summary><strong>Operator access, identity and account scope</strong> · 10 sources</summary>
+---
+
+## Operator access, identity and account scope
+
+10 source captures.
 
 ### 65. Restricted operator opened an SSM shell
 
@@ -638,10 +657,12 @@ The original sign-in completion capture contains an OAuth callback code in its b
 
 **AWS temporary-session sign-in prompt.** The sign-in page describes sharing the active session with local development tools. The image does not establish that MFA was required. [Open original](https://drive.google.com/file/d/1mU0q3dGB9Cl1eb-rVrdEXgE22Fa8_u9a/view?usp=drivesdk).
 
-</details>
 
-<details>
-<summary><strong>VPC, subnet placement and route topology</strong> · 7 sources</summary>
+---
+
+## VPC, subnet placement and route topology
+
+7 source captures.
 
 ### 74. Project VPC tags
 
@@ -685,10 +706,12 @@ The original sign-in completion capture contains an OAuth callback code in its b
 
 **Recovery subnet routes.** The recovery subnet route view shows its associated route table and public-routing configuration. [Open original](https://drive.google.com/file/d/1-bI4XV5IjY41MTL8WW3YzBd0WL6-1j1l/view?usp=drivesdk).
 
-</details>
 
-<details>
-<summary><strong>Budget records and cost scope</strong> · 3 sources</summary>
+---
+
+## Budget records and cost scope
+
+3 source captures.
 
 ### 08. Monthly budget records
 
@@ -708,7 +731,8 @@ The original sign-in completion capture contains an OAuth callback code in its b
 
 **Project budget overview.** The budget overview shows the configured threshold and capture-time billing information. A budget is an alert mechanism, not a spending cap. [Open original](https://drive.google.com/file/d/1kJ6ShrHRB_SRcVvj1tHYAQs-ZBXrckeo/view?usp=drivesdk).
 
-</details>
+
+---
 
 ## Evidence notes and remaining sign-off
 
@@ -719,4 +743,3 @@ The original sign-in completion capture contains an OAuth callback code in its b
 - **Credentials:** source exports previously exposed temporary access-key IDs. Current text copies were redacted; this README does not claim that old Git history was erased or that sessions were revoked. Original captures should be reviewed before further publication.
 
 Source images are dated observations, not new AWS checks. The original image bytes are retained for each embedded asset; [the manifest](docs/readme-evidence/manifest.json) records their hashes and Drive sources. This README adds visual evidence and corrects the older handover's missing-evidence notes; it does not silently turn every pending item into a pass.
-
